@@ -3,8 +3,12 @@ const descInput = document.getElementById("descInput");
 const createBtn = document.getElementById("createBtn");
 const listContainer = document.getElementById("listContainer");
 
-let items = [];
+let items = JSON.parse(localStorage.getItem("items")) || [];
 let editIndex = -1;
+
+function saveToLocalStorage() {
+  localStorage.setItem("items", JSON.stringify(items));
+}
 
 function renderItems() {
   listContainer.innerHTML = "";
@@ -43,6 +47,7 @@ createBtn.addEventListener("click", () => {
     createBtn.textContent = "Create";
   }
 
+  saveToLocalStorage();
   nameInput.value = "";
   descInput.value = "";
   renderItems();
@@ -50,6 +55,7 @@ createBtn.addEventListener("click", () => {
 
 function deleteItem(index) {
   items.splice(index, 1);
+  saveToLocalStorage();
   renderItems();
 }
 
