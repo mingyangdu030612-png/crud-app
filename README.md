@@ -31,5 +31,7 @@ This is a simple CRUD web application built using Python Flask.
 2. Run the container:
    docker run -p 5000:5000 my-flask-app
 
-3. Open in browser:
+3. Docker-compose --build
+
+4. Open in browser:
    http://localhost:5000
