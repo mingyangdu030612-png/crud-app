@@ -1,7 +1,7 @@
 ## CRUD App
 
 ## Description
-This is a simple CRUD web application built using Python Flask.
+This is a CRUD web application built with Flask and Docker Compose, including a PostgreSQL database.
 
 ## Features
 - Create records
@@ -10,26 +10,14 @@ This is a simple CRUD web application built using Python Flask.
 - Delete records
 
 ## Tech Stack
-- Backend: Python (Flask)
-- Frontend: HTML, CSS
-- No JavaScript logic used
+- Flask
+- Docker
+- Docker Compose
+- PostgreSQL (postgres:15)
 
 ## How to run
-1. Install Flask:
-   pip install flask
 
-2. Run the app:
-   python app.py
+docker-compose up --build
 
-3. Open browser:
-   http://127.0.0.1:5000
-
-## Run with Docker
-1. Build the Docker image:
-   docker build -t my-flask-app .
-
-2. Run the container:
-   docker run -p 5000:5000 my-flask-app
-
-3. Open in browser:
-   http://localhost:5000
+Then open:
+http://localhost:5000
