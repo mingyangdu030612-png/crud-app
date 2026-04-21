@@ -1,22 +1,25 @@
-# Simple CRUD App
+## CRUD App
 
 ## Description
-This is a basic web application that allows users to create, view, update, and delete records.
+This is a simple CRUD web application built using Python Flask.
 
 ## Features
-- Create a record with name and description
-- View all records
-- Update a record
-- Delete a record
-- Local storage in browser
+- Create records
+- Read records
+- Update records
+- Delete records
 
-## Files
-- `index.html` - main webpage
-- `style.css` - styling
-- `script.js` - CRUD functionality
+## Tech Stack
+- Backend: Python (Flask)
+- Frontend: HTML, CSS
+- No JavaScript logic used
 
 ## How to run
-Open `index.html` in a browser.
+1. Install Flask:
+   pip install flask
 
-## Next Step
-Containerize the application with Docker.
+2. Run the app:
+   python app.py
+
+3. Open browser:
+   http://127.0.0.1:5000
