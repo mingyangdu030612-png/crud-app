@@ -23,3 +23,13 @@ This is a simple CRUD web application built using Python Flask.
 
 3. Open browser:
    http://127.0.0.1:5000
+
+## Run with Docker
+1. Build the Docker image:
+   docker build -t my-flask-app .
+
+2. Run the container:
+   docker run -p 5000:5000 my-flask-app
+
+3. Open in browser:
+   http://localhost:5000
