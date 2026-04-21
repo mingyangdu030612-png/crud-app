@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD App</h1>
+
+        <form action="/add" method="POST" class="form-box">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <textarea name="description" placeholder="Enter description" required></textarea>
+            <button type="submit">Create</button>
+        </form>
+
+        <h2>Records</h2>
+
+        {% for item in items %}
+        <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+
+            <form action="/edit/{{ loop.index0 }}" method="POST" class="inline-form">
+                <input type="text" name="name" placeholder="New name" required>
+                <input type="text" name="description" placeholder="New description" required>
+                <button type="submit">Update</button>
+            </form>
+
+            <a href="/delete/{{ loop.index0 }}" class="delete-link">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
