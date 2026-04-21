@@ -8,6 +8,7 @@ This is a basic web application that allows users to create, view, update, and d
 - View all records
 - Update a record
 - Delete a record
+- Local storage in browser
 
 ## Files
 - `index.html` - main webpage
@@ -16,3 +17,6 @@ This is a basic web application that allows users to create, view, update, and d
 
 ## How to run
 Open `index.html` in a browser.
+
+## Next Step
+Containerize the application with Docker.
